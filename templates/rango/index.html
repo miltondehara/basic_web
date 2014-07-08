@@ -12,14 +12,23 @@
 	
 	{% if categories%}
 		<ul>
-			{%for category in categories%}
-			<li>{{ category.name }}</li>
+			{% for category in categories %}
+			<li><a href="/rango/category/{{ category.url }}">{{ category.name }}</li></a>
 			{% endfor %}
 		</ul>
 	{% else %}
 		<strong>No hay categorias presentes. </strong>
 	{% endif %}
 
+	{% if pages %}
+		<ul>
+			{% for page in pages %}
+			<li> {{ page.name }} </li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<strong>No hay paginas presentes</strong>
+	{% endif %}
 	<a href="/rango/about">About</a>
 </body>
 </html>
