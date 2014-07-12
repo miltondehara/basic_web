@@ -23,12 +23,14 @@
 	{% if pages %}
 		<ul>
 			{% for page in pages %}
-			<li> {{ page.name }} </li>
+			<li> {{ page.title }} </li>
 			{% endfor %}
 		</ul>
 	{% else %}
 		<strong>No hay paginas presentes</strong>
 	{% endif %}
+
+	<a href="/rango/add_category/">Add a New Category</a>
 	<a href="/rango/about">About</a>
 </body>
 </html>
